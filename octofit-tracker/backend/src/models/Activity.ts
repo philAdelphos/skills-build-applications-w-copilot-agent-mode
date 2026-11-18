@@ -6,7 +6,7 @@ const activitySchema = new Schema({
   team: { type: Schema.Types.ObjectId, ref: 'Team', required: true },
   minutes: { type: Number, required: true, min: 1 },
   points: { type: Number, required: true, min: 0 },
-  occurredAt: { type: Date, required: true, default: Date.now },
+  occurredAt: { type: Date, required: true },
 });
 
 export const Activity = model('Activity', activitySchema);
